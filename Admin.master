@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="hinhadmin/minologo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.MultiFile.pack.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/khanh.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+                <div class="text-center navbar-brand-wrapper">
+                    <a class="navbar-brand brand-logo" href="home.aspx">
+                        <img src="hinhadmin/LOGO.png" alt="logo"></a>
+                    <a class="navbar-brand brand-logo-mini" href="home.aspx">
+                        <img src="hinhadmin/minologo.png" alt="logo"></a>
+                </div>
+                <div class="navbar-menu-wrapper d-flex align-items-center">
+                    <asp:Label ID="lbTenDN" runat="server" CssClass="page-name d-none d-lg-block"></asp:Label>
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item">
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="dxad">Đăng Xuất</asp:LinkButton>
+                        </li>
+                        <li class="nav-item d-none d-sm-block profile-img">
+                            <a class="nav-link profile-image" href="#">
+                                <img src="hinhadmin/2056_pikachu.jpg" alt="profile-img">
+                                <span class="online-status online bg-success"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center ml-auto" type="button" data-toggle="offcanvas">
+                        <span class="icon-menu icons"></span>
+                    </button>
+                </div>
+            </nav>
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <div class="row row-offcanvas row-offcanvas-right">
+                    <!-- partial:partials/_sidebar.html -->
+                    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                        <ul class="nav">
+                            <li class="nav-item nav-category">
+                                <span class="nav-link">TỔNG QUAN</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.aspx">
+                                    <span class="menu-title">Trang Chủ</span>
+                                    <i class="icon-speedometer menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="quantrivien.aspx">
+                                    <span class="menu-title">Quản Trị Viên</span>
+                                    <i class="icon-speedometer menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item nav-category">
+                                <span class="nav-link">QUẢN LÝ</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="congty.aspx">
+                                    <span class="menu-title">Hãng Sản Xuất</span>
+                                    <i class="icon-speedometer menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dienthoai.aspx">
+                                    <span class="menu-title">Sản Phẩm</span>
+                                    <i class="icon-wrench menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="viewtintuc.aspx">
+                                    <span class="menu-title">Tin Tức</span>
+                                    <i class="icon-wrench menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donhang.aspx">
+                                    <span class="menu-title">Đơn Hàng</span>
+                                    <i class="icon-wrench menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item nav-category">
+                                <span class="nav-link">KHUYẾN MÃI</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="SlideHome.aspx">
+                                    <span class="menu-title">Khuyến Mãi Chung</span>
+                                    <i class="icon-wrench menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="khuyenmaicty.aspx">
+                                    <span class="menu-title">Khuyến Mãi Theo Công Ty</span>
+                                    <i class="icon-wrench menu-icon"></i>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+                    <!-- partial -->
+                    <div class="content-wrapper">
+                        <asp:ContentPlaceHolder ID="body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- partial:partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="container-fluid clearfix">
+                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Hệ thống bán lẻ điện thoại di động Nguyễn Hoàng Mobile</span>
+                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Trang Quản Trị Admin</span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
+                </div>
+                <!-- row-offcanvas ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+        <!-- container-scroller -->
+    </form>
+</body>
+</html>

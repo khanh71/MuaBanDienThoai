@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TrangChu.master.cs" Inherits="TrangChu" %>
+
+<%@ Register Src="~/UC/UCHead.ascx" TagPrefix="uc1" TagName="UCHead" %>
+<%@ Register Src="~/UC/UCFooter.ascx" TagPrefix="uc1" TagName="UCFooter" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="images/icon/minologo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/web style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/khanh.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="abc">
+    <form id="form1" runat="server">
+        <uc1:UCHead runat="server" ID="UCHead" />
+        <div style="min-height: 470px; margin-bottom: 20px">
+            <div style="margin: 60px 30px 0 30px">
+                <asp:ContentPlaceHolder ID="gioithieu" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="margin: 20px 30px 0 30px">
+                <asp:ContentPlaceHolder ID="noidung" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <uc1:UCFooter runat="server" ID="UCFooter" />
+    </form>
+</body>
+</html>
